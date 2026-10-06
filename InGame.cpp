@@ -7,7 +7,6 @@ void InGame::Enter()
 {
 	// 3‘Ì‚Ì‚¤‚¿ƒ‰ƒ“ƒ_ƒ€‚É1‘Ì‚¾‚¯¶¬‚µ‚Ä•\¦‚·‚é
 	int i = rand() % 3;  
-
 	Enemy* enemy = EnemyFactory::CreateEnemy(i);
 	//	“G‚Ìî•ñ‚ğ•\¦
 	if (enemy != nullptr)
