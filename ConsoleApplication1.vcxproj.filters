@@ -1,22 +1,65 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="ソース ファイル">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
-    </Filter>
-    <Filter Include="ヘッダー ファイル">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
-    </Filter>
     <Filter Include="リソース ファイル">
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="RPG">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="RPG\Manager">
+      <UniqueIdentifier>{c4c636ff-57ac-4b45-bc62-607283fa3fff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RPG\Core">
+      <UniqueIdentifier>{7ce25496-abee-409e-a97a-b0aed2de938e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RPG\State">
+      <UniqueIdentifier>{2fd0686e-4603-4407-b5c6-9d4517291ab1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RPG\State\TitleState">
+      <UniqueIdentifier>{f8baca41-3808-417d-82cb-5f87d246ae2e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RPG\State\InGameState">
+      <UniqueIdentifier>{f2b1b22b-cd84-4e90-92b2-0184826ee1ed}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RPG\State\ResultState">
+      <UniqueIdentifier>{419ac18f-45e3-4d6d-bb16-806efafa52b1}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="ConsoleApplication1.cpp">
-      <Filter>ソース ファイル</Filter>
+    <ClCompile Include="GameManager.cpp">
+      <Filter>RPG\Manager</Filter>
     </ClCompile>
+    <ClCompile Include="ConsoleApplication1.cpp">
+      <Filter>RPG\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Title.cpp">
+      <Filter>RPG\State\TitleState</Filter>
+    </ClCompile>
+    <ClCompile Include="InGame.cpp">
+      <Filter>RPG\State\InGameState</Filter>
+    </ClCompile>
+    <ClCompile Include="Result.cpp">
+      <Filter>RPG\State\ResultState</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="GameManager.h">
+      <Filter>RPG\Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="Title.h">
+      <Filter>RPG\State\TitleState</Filter>
+    </ClInclude>
+    <ClInclude Include="GameState.h">
+      <Filter>RPG\Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="InGame.h">
+      <Filter>RPG\State\InGameState</Filter>
+    </ClInclude>
+    <ClInclude Include="Result.h">
+      <Filter>RPG\State\ResultState</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
