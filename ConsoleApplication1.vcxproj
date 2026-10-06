@@ -124,12 +124,17 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="ConsoleApplication1.cpp" />
+    <ClCompile Include="EnemyFactory.cpp" />
     <ClCompile Include="Result.cpp" />
     <ClCompile Include="GameManager.cpp" />
     <ClCompile Include="InGame.cpp" />
     <ClCompile Include="Title.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Element.h" />
+    <ClInclude Include="Enemy.h" />
+    <ClInclude Include="EnemyData.h" />
+    <ClInclude Include="EnemyFactory.h" />
     <ClInclude Include="Result.h" />
     <ClInclude Include="GameManager.h" />
     <ClInclude Include="GameState.h" />

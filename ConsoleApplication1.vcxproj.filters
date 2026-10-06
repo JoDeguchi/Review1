@@ -27,6 +27,9 @@
     <Filter Include="RPG\State\ResultState">
       <UniqueIdentifier>{419ac18f-45e3-4d6d-bb16-806efafa52b1}</UniqueIdentifier>
     </Filter>
+    <Filter Include="RPG\Enemy">
+      <UniqueIdentifier>{61df05aa-ba0f-4127-b3bd-503728b3e8ff}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="GameManager.cpp">
@@ -44,6 +47,9 @@
     <ClCompile Include="Result.cpp">
       <Filter>RPG\State\ResultState</Filter>
     </ClCompile>
+    <ClCompile Include="EnemyFactory.cpp">
+      <Filter>RPG\Enemy</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GameManager.h">
@@ -60,6 +66,18 @@
     </ClInclude>
     <ClInclude Include="Result.h">
       <Filter>RPG\State\ResultState</Filter>
+    </ClInclude>
+    <ClInclude Include="Enemy.h">
+      <Filter>RPG\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="EnemyData.h">
+      <Filter>RPG\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="Element.h">
+      <Filter>RPG\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="EnemyFactory.h">
+      <Filter>RPG\Enemy</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

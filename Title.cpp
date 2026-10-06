@@ -16,5 +16,5 @@ void Title::Update(GameManager* manager, float deltaTime)
 
 void Title::Exit()
 {
-	std::cout << "タイトル画面を終了" << std::endl;
+	std::cout << "ゲーム画面に移行" << std::endl;
 }

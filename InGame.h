@@ -1,5 +1,7 @@
 #pragma once
 #include "GameState.h"
+#include "Enemy.h"
+#include "EnemyFactory.h"
 
 class GameManager;
 
