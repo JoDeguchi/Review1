@@ -20,4 +20,3 @@ Player* PlayerFactory::CreatePlayer(int ID)
 	//	ID‚ªŒ©‚Â‚©‚ç‚È‚©‚Á‚½ê‡‚Ínullptr‚ğ•Ô‚·
 	return nullptr;
 }
-

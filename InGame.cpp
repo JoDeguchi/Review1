@@ -10,8 +10,8 @@ void InGame::Enter()
 	//----------------------------------------------
 	// 敵
 	// ---------------------------------------------
-	int i = rand() % 3;  // 3体のうちランダムに1体だけ生成して表示する		
-	enemy_= EnemyFactory::CreateEnemy(i);
+	int i = rand() % 3;  // 3体のうちランダムに1体だけ生成して表示する
+	enemy_ = EnemyFactory::CreateEnemy(i);
 	//	敵の情報を表示
 	if (enemy_ != nullptr)
 	{
@@ -26,7 +26,7 @@ void InGame::Enter()
 	}
 
 	//------------------------------------
-	//	プレイヤー
+	//	プレイヤー（永続）
 	//------------------------------------
 	player_ = PlayerFactory::CreatePlayer(0);
 
@@ -36,6 +36,7 @@ void InGame::Enter()
 		std::cout << player_->data.NAME << " HP :" << player_->data.HP << std::endl;
 		std::cout << player_->data.NAME << " ATK:" << player_->data.ATK << std::endl;
 		std::cout << player_->data.NAME << " DEF:" << player_->data.DEF << std::endl;
+		std::cout << "Level: " << player_->level << std::endl;
 		std::cout << "\n戦闘スタート" << std::endl;
 	}
 	else
@@ -47,7 +48,6 @@ void InGame::Enter()
 //	戦闘
 void InGame::Update(GameManager* manager, float deltaTime)
 {
-	//	デバック
 	if (player_ == nullptr || enemy_ == nullptr)
 	{
 		// どちらか生成に失敗しているなら結果へ
@@ -55,35 +55,31 @@ void InGame::Update(GameManager* manager, float deltaTime)
 		return;
 	}
 
-	//	ターン制攻撃
 	while (player_->data.HP > 0 && enemy_->data.HP > 0)
 	{
 		// プレイヤーのターン
-		std::cout << "\nプレイヤーの攻撃！ (Enter)" << std::endl;
+		std::cout << "\nプレイヤーの攻撃！ (Enterで進行)" << std::endl;
 		std::cin.get();
-
-		//	攻撃オブジェクト取得
-		auto attack = attackPool_.Acquire();
-		//	ダメージ計算
-		attack->Execute(player_->data, enemy_->data);
-
-		std::cout << player_->data.NAME << " は " << enemy_->data.NAME << " に " << attack->damage << " のダメージを与えた！" << std::endl;
-		std::cout << enemy_->data.NAME << " の残りHP: " << enemy_->data.HP << std::endl;
-
+		{
+			int damage = std::max(1, player_->data.ATK - enemy_->data.DEF);
+			enemy_->data.HP -= damage;
+			if (enemy_->data.HP < 0) enemy_->data.HP = 0;
+			std::cout << player_->data.NAME << " は " << enemy_->data.NAME << " に " << damage << " のダメージを与えた！" << std::endl;
+			std::cout << enemy_->data.NAME << " の残りHP: " << enemy_->data.HP << std::endl;
+		}
 
 		if (enemy_->data.HP <= 0) break;
 
 		// 敵のターン
-		std::cout << "\n敵の攻撃！ (Enter)" << std::endl;
+		std::cout << "\n敵の攻撃！ (Enterで進行)" << std::endl;
 		std::cin.get();
-
-		attack->Execute(enemy_->data, player_->data);
-
-
-		std::cout << enemy_->data.NAME << " は " << player_->data.NAME << " に " << attack->damage << " のダメージを与えた！" << std::endl;
-		std::cout << player_->data.NAME << " の残りHP: " << player_->data.HP << std::endl;
-
-
+		{
+			int damage = std::max(1, enemy_->data.ATK - player_->data.DEF);
+			player_->data.HP -= damage;
+			if (player_->data.HP < 0) player_->data.HP = 0;
+			std::cout << enemy_->data.NAME << " は " << player_->data.NAME << " に " << damage << " のダメージを与えた！" << std::endl;
+			std::cout << player_->data.NAME << " の残りHP: " << player_->data.HP << std::endl;
+		}
 	}
 
 	// 勝敗表示
@@ -99,13 +95,9 @@ void InGame::Update(GameManager* manager, float deltaTime)
 	else
 	{
 		std::cout << player_->data.NAME << " の勝利！" << std::endl;
+		// プレイヤー勝利時にレベルアップ
+		player_->LevelUp();
 	}
-
-	// 後始末して結果へ遷移
-	delete enemy_;
-	enemy_ = nullptr;
-	delete player_;
-	player_ = nullptr;
 
 	std::cout << "結果表示へ（Enter）" << std::endl;
 	std::cin.get();

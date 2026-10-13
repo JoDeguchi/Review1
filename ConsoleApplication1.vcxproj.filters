@@ -9,9 +9,6 @@
       <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
       <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
     </Filter>
-    <Filter Include="RPG\Manager">
-      <UniqueIdentifier>{c4c636ff-57ac-4b45-bc62-607283fa3fff}</UniqueIdentifier>
-    </Filter>
     <Filter Include="RPG\Core">
       <UniqueIdentifier>{7ce25496-abee-409e-a97a-b0aed2de938e}</UniqueIdentifier>
     </Filter>
@@ -36,10 +33,16 @@
     <Filter Include="RPG\System">
       <UniqueIdentifier>{05a30e17-8d1d-468f-9ec9-e965416f3f6e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="RPG\System\Pool">
+      <UniqueIdentifier>{29ba45c1-a3fa-45d4-9354-b7248ca5ee7e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RPG\System\Manager">
+      <UniqueIdentifier>{c4c636ff-57ac-4b45-bc62-607283fa3fff}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="GameManager.cpp">
-      <Filter>RPG\Manager</Filter>
+      <Filter>RPG\System\Manager</Filter>
     </ClCompile>
     <ClCompile Include="ConsoleApplication1.cpp">
       <Filter>RPG\Core</Filter>
@@ -62,13 +65,13 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GameManager.h">
-      <Filter>RPG\Manager</Filter>
+      <Filter>RPG\System\Manager</Filter>
     </ClInclude>
     <ClInclude Include="Title.h">
       <Filter>RPG\State\TitleState</Filter>
     </ClInclude>
     <ClInclude Include="GameState.h">
-      <Filter>RPG\Manager</Filter>
+      <Filter>RPG\System\Manager</Filter>
     </ClInclude>
     <ClInclude Include="InGame.h">
       <Filter>RPG\State\InGameState</Filter>
@@ -91,17 +94,17 @@
     <ClInclude Include="PlayerFactory.h">
       <Filter>RPG\Player</Filter>
     </ClInclude>
-    <ClInclude Include="ObjectPool.h">
-      <Filter>RPG\Manager</Filter>
-    </ClInclude>
-    <ClInclude Include="PoolHandle.h">
-      <Filter>RPG\Manager</Filter>
-    </ClInclude>
     <ClInclude Include="Damage.h">
       <Filter>RPG\System</Filter>
     </ClInclude>
     <ClInclude Include="CharaData.h">
       <Filter>RPG\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjectPool.h">
+      <Filter>RPG\System\Pool</Filter>
+    </ClInclude>
+    <ClInclude Include="PoolHandle.h">
+      <Filter>RPG\System\Pool</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -20,4 +20,6 @@ public:
 	//	ƒvƒŒƒCƒ„[‚Ì¶¬
 	static Player* CreatePlayer(int enemyID);
 
+	
+
 };
