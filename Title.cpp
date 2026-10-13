@@ -6,6 +6,7 @@ void Title::Enter()
 {
 	std::cout << "RPG" << std::endl;
 	std::cout << "Press any key to start..." << std::endl;
+	std::cout << "(すべてエンターキーで進行します)" << std::endl;
 }
 
 void Title::Update(GameManager* manager, float deltaTime)

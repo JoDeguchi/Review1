@@ -1,5 +1,5 @@
 #pragma once
-#include "EnemyData.h"
+#include "CharaData.h"
 
 /// <summary>
 /// “GƒNƒ‰ƒX@“G‚Ìó‘Ô‚Æ‘®«‚ğ‚Ü‚Æ‚ß‚½‚à‚Ì
@@ -8,9 +8,9 @@
 class Enemy
 {
 public:
-	EnemyData data;
+	CharaData data;
 
-	Enemy(const EnemyData& enemyData)
+	Enemy(const CharaData& enemyData)
 		: data(enemyData)
 	{
 	}

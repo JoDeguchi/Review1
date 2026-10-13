@@ -1,5 +1,5 @@
 #pragma once
-#include "EnemyData.h"
+#include "CharaData.h"
 
 class Enemy;
 
@@ -11,7 +11,7 @@ class EnemyFactory
 private:
 
 	//	敵の種類のデータテーブル
-	static const EnemyData EnemyTable[];
+	static const CharaData EnemyTable[];
 	//	敵の種類の数
 	static const int EnemyTableSize;
 

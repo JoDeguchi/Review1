@@ -2,9 +2,9 @@
 #include "Element.h"
 
 /// <summary>
-/// 敵のデータ（名前、状態など）
+/// キャラのデータ（名前、状態など）
 /// </summary>
-struct EnemyData
+struct CharaData
 {
 	int ID;					// 敵のID
 	const char* NAME;		// 敵の名前

@@ -12,7 +12,7 @@ int main()
 
 	while (1) {
 		//manager.Update(1.0f);
-
+		//	シングルトン利用
 		GameManager::GetInstance().Update(1.0f);
 	}
 }

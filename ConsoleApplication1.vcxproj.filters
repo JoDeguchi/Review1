@@ -30,6 +30,12 @@
     <Filter Include="RPG\Enemy">
       <UniqueIdentifier>{61df05aa-ba0f-4127-b3bd-503728b3e8ff}</UniqueIdentifier>
     </Filter>
+    <Filter Include="RPG\Player">
+      <UniqueIdentifier>{2bdfe65a-77ec-472a-9adf-6a76b5128b64}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RPG\System">
+      <UniqueIdentifier>{05a30e17-8d1d-468f-9ec9-e965416f3f6e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="GameManager.cpp">
@@ -49,6 +55,9 @@
     </ClCompile>
     <ClCompile Include="EnemyFactory.cpp">
       <Filter>RPG\Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerFactory.cpp">
+      <Filter>RPG\Player</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -70,13 +79,28 @@
     <ClInclude Include="Enemy.h">
       <Filter>RPG\Enemy</Filter>
     </ClInclude>
-    <ClInclude Include="EnemyData.h">
-      <Filter>RPG\Enemy</Filter>
-    </ClInclude>
     <ClInclude Include="Element.h">
       <Filter>RPG\Enemy</Filter>
     </ClInclude>
     <ClInclude Include="EnemyFactory.h">
+      <Filter>RPG\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>RPG\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerFactory.h">
+      <Filter>RPG\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjectPool.h">
+      <Filter>RPG\Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="PoolHandle.h">
+      <Filter>RPG\Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="Damage.h">
+      <Filter>RPG\System</Filter>
+    </ClInclude>
+    <ClInclude Include="CharaData.h">
       <Filter>RPG\Enemy</Filter>
     </ClInclude>
   </ItemGroup>

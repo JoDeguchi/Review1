@@ -1,14 +1,14 @@
 #include "EnemyFactory.h"
 #include "Enemy.h"
 
-const EnemyData EnemyFactory::EnemyTable[] = {
+const CharaData EnemyFactory::EnemyTable[] = {
 	//	ID, 名前, HP, ATK, DEF, 属性
-	{ 0, "スライム", 10	, 2	, 1	, ElementType::Water },
-	{ 1, "ゴブリン", 20	, 5	, 3	, ElementType::Earth },
-	{ 2, "ドラゴン", 100, 20, 10, ElementType::Fire }
+	{ 0, "スライム", 50	, 8	, 5	, ElementType::Water },
+	{ 1, "ゴブリン", 100, 15, 10	, ElementType::Earth },
+	{ 2, "ドラゴン", 200, 25, 20, ElementType::Fire }
 };
 
-const int EnemyFactory::EnemyTableSize = sizeof(EnemyTable) / sizeof(EnemyData);
+const int EnemyFactory::EnemyTableSize = sizeof(EnemyTable) / sizeof(CharaData);
 
 Enemy* EnemyFactory::CreateEnemy(int ID)
 {
