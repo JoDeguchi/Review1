@@ -17,6 +17,7 @@ class InGame : public GameState
 private:
 	Enemy* enemy_;
 	Player* player_;
+
 	//	オブジェクトプール（ターンずつなので容量１）
 	ObjectPool<Attack> attackPool_{ 1 };
 

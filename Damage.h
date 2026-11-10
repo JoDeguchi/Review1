@@ -1,6 +1,6 @@
 #pragma once
 #include "CharaData.h"
-
+#include <algorithm>
 //  ダメージ与える用
 class Attack
 {

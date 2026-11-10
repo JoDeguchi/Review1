@@ -33,11 +33,11 @@
     <Filter Include="RPG\System">
       <UniqueIdentifier>{05a30e17-8d1d-468f-9ec9-e965416f3f6e}</UniqueIdentifier>
     </Filter>
-    <Filter Include="RPG\System\Pool">
-      <UniqueIdentifier>{29ba45c1-a3fa-45d4-9354-b7248ca5ee7e}</UniqueIdentifier>
-    </Filter>
     <Filter Include="RPG\System\Manager">
       <UniqueIdentifier>{c4c636ff-57ac-4b45-bc62-607283fa3fff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RPG\Core\Pool">
+      <UniqueIdentifier>{29ba45c1-a3fa-45d4-9354-b7248ca5ee7e}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -97,14 +97,26 @@
     <ClInclude Include="Damage.h">
       <Filter>RPG\System</Filter>
     </ClInclude>
-    <ClInclude Include="CharaData.h">
-      <Filter>RPG\Enemy</Filter>
-    </ClInclude>
     <ClInclude Include="ObjectPool.h">
-      <Filter>RPG\System\Pool</Filter>
+      <Filter>RPG\Core\Pool</Filter>
     </ClInclude>
     <ClInclude Include="PoolHandle.h">
-      <Filter>RPG\System\Pool</Filter>
+      <Filter>RPG\Core\Pool</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerView.h">
+      <Filter>RPG\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="CharaData.h">
+      <Filter>RPG</Filter>
+    </ClInclude>
+    <ClInclude Include="BattleController.h">
+      <Filter>RPG\State\InGameState</Filter>
+    </ClInclude>
+    <ClInclude Include="EnemyView.h">
+      <Filter>RPG\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="BattleView.h">
+      <Filter>RPG\State\InGameState</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -132,14 +132,18 @@
     <ClCompile Include="Title.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="BattleController.h" />
+    <ClInclude Include="BattleView.h" />
     <ClInclude Include="Damage.h" />
     <ClInclude Include="Element.h" />
     <ClInclude Include="Enemy.h" />
     <ClInclude Include="CharaData.h" />
     <ClInclude Include="EnemyFactory.h" />
+    <ClInclude Include="EnemyView.h" />
     <ClInclude Include="ObjectPool.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="PlayerFactory.h" />
+    <ClInclude Include="PlayerView.h" />
     <ClInclude Include="PoolHandle.h" />
     <ClInclude Include="Result.h" />
     <ClInclude Include="GameManager.h" />

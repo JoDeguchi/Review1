@@ -1,6 +1,5 @@
 #pragma once
 #include "CharaData.h"
-#include <iostream>
 
 /// <summary>
 /// プレイヤークラス　プレイヤーの属性と状態をまとめたもの
@@ -25,8 +24,6 @@ public:
 		data.ATK = static_cast<int>(data.ATK * 1.1f);
 		data.DEF = static_cast<int>(data.DEF * 1.1f);
 
-		std::cout << data.NAME << " はレベル" << level << "に上がった！" << std::endl;
-		std::cout << "HP:" << data.HP << " ATK:" << data.ATK << " DEF:" << data.DEF << std::endl;
 	}
 };
 	
