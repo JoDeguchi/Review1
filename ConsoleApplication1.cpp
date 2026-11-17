@@ -1,18 +1,23 @@
 ﻿#include "Title.h"
 #include "GameManager.h"
+#include "conio.h"
+#include <cstdlib>
 
 int main()
 {
-	/*GameManager manager;
-	manager.ChangeState(std::make_unique<Title>());*/
-
 	//	シングルトンパターンを使用してGameManagerのインスタンスを取得
 	GameManager::GetInstance().ChangeState(std::make_unique<Title>());
 
-
+	//	
 	while (1) {
-		//manager.Update(1.0f);
 		//	シングルトン利用
 		GameManager::GetInstance().Update(1.0f);
+		
+		std::cout << "ゲーム終了" << std::endl;
+
+		system("pause");
+
+		return 0;
+		
 	}
 }
