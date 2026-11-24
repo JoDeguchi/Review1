@@ -3,6 +3,26 @@
 #include "conio.h"
 #include <cstdlib>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 int main()
 {
 	//	シングルトンパターンを使用してGameManagerのインスタンスを取得
